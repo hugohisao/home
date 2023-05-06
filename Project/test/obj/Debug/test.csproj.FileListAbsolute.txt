@@ -8,3 +8,13 @@ C:\Users\cs07184\source\repos\test\test\obj\Debug\test.csproj.GenerateResource.c
 C:\Users\cs07184\source\repos\test\test\obj\Debug\test.csproj.CoreCompileInputs.cache
 C:\Users\cs07184\source\repos\test\test\obj\Debug\test.exe
 C:\Users\cs07184\source\repos\test\test\obj\Debug\test.pdb
+C:\programupdates\Project\test\bin\Debug\test.exe.config
+C:\programupdates\Project\test\bin\Debug\test.exe
+C:\programupdates\Project\test\bin\Debug\test.pdb
+C:\programupdates\Project\test\obj\Debug\test.csprojAssemblyReference.cache
+C:\programupdates\Project\test\obj\Debug\test.MainForm.resources
+C:\programupdates\Project\test\obj\Debug\test.Properties.Resources.resources
+C:\programupdates\Project\test\obj\Debug\test.csproj.GenerateResource.cache
+C:\programupdates\Project\test\obj\Debug\test.csproj.CoreCompileInputs.cache
+C:\programupdates\Project\test\obj\Debug\test.exe
+C:\programupdates\Project\test\obj\Debug\test.pdb
