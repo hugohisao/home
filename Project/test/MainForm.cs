@@ -16,6 +16,37 @@ namespace test
         {
             InitializeComponent();
 
+            this.Load += MainForm_Load1;
+
+            this.SizeChanged += MainForm_SizeChanged;
+           
+
+        }
+
+        //窗體的默認寬和高
+        int normalWidth = 0;
+        int normalHeight = 0;
+        //需要記錄的空間的位置以及寬和高（X, Y, Widht, Height）
+        Dictionary<string, Rectangle> normalControl = new Dictionary<string, Rectangle>();
+
+
+        private void MainForm_SizeChanged(object sender, EventArgs e)
+        {
+            //根據原始比例進行新尺寸的計算
+            
+            
+        }
+
+        private void MainForm_Load1(object sender, EventArgs e)
+        {
+            //記錄相關對象以及原始尺寸
+            normalWidth = this.normalWidth;
+            normalHeight = this.normalHeight;
+            foreach (Console  in  this.panel2.Controls) {
+
+
+            }
+       
         }
 
         private void MainForm_Load(object sender, EventArgs e)
