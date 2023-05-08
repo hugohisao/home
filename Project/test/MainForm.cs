@@ -1,4 +1,8 @@
-﻿using System;
+﻿//----------------------------------------------------------------------
+//2023.05.08 hugohisao P8計算羅輯編寫;
+
+//-------------------------------------------------------------------
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,39 +37,64 @@ namespace test
         private void MainForm_SizeChanged(object sender, EventArgs e)
         {
             //根據原始比例進行新尺寸的計算
-            
-            
+            int w = this.panel2.Width;
+            int h = this.panel2.Height;
+            foreach (Control item in this.panel2.Controls)
+            {
+                int newX = (int)(w * 1.0 / normalWidth * normalControl[item.Name].X);
+                int newY = (int)(h * 1.0 / normalHeight * normalControl[item.Name].Y);
+                int newW = (int)(w * 1.0 / normalWidth * normalControl[item.Name].Width);
+                int newH = (int)(h * 1.0 / normalHeight * normalControl[item.Name].Height);
+
+                item.Left = newX;
+                item.Top = newY;
+                item.Width = newW;
+                item.Height = newH;
+             
+            }
+
         }
 
         private void MainForm_Load1(object sender, EventArgs e)
         {
             //記錄相關對象以及原始尺寸
-            normalWidth = this.normalWidth;
-            normalHeight = this.normalHeight;
-            foreach (Console  in  this.panel2.Controls) {
+            normalWidth = this.panel2.Width;
+            normalHeight = this.panel2.Height;
 
+            foreach (Control item  in  this.panel2.Controls) {             
 
+                normalControl.Add(item.Name, new Rectangle(item.Left, item.Top, item.Width, item.Height));
             }
        
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
-        {
+        //private void MainForm_Load(object sender, EventArgs e)
+        //{
+
+        //}
+
+        //private void panel2_Paint(object sender, PaintEventArgs e)
+        //{
+
+        //}
+
+
+        //觸發這個(事件)方法的對象
+        //e鼠標動作參數
+        private void button1_Click(object sender, EventArgs e)
+        {   
+            //獲取到觸發這個事件的對象
+            //拿到對象後獲取對象的Text屬性值
+            Button bt = sender as Button;
+            string number = bt.Text;
+            this.label1.Text = bt.Text;
 
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
+            Button bt = sender as Button;
+            string op = bt.Text;
 
         }
     }
