@@ -108,6 +108,7 @@
             this.button16.TabIndex = 0;
             this.button16.Text = "÷";
             this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button4_Click);
             // 
             // button15
             // 
@@ -126,6 +127,7 @@
             this.button12.TabIndex = 0;
             this.button12.Text = "×";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button4_Click);
             // 
             // button11
             // 
@@ -145,6 +147,7 @@
             this.button8.TabIndex = 0;
             this.button8.Text = "-";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button4_Click);
             // 
             // button14
             // 

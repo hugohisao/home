@@ -1,5 +1,6 @@
 ﻿//----------------------------------------------------------------------
 //2023.05.08 hugohisao P8計算羅輯編寫;
+//2023.05.09 hugohisao P9計算羅輯編寫;
 
 //-------------------------------------------------------------------
 using System;
@@ -16,6 +17,43 @@ namespace test
 {
     public partial class MainForm : Form
     {
+        //1.需要进行按比例缩放
+        //2.记录一下原始比例
+        //  窗口加载的时候完成
+        //3.根据原始比例进行新尺寸定位计算
+        //4.将新的定位尺寸设置给控件
+        private string _number1;
+
+        public string number1
+        {
+            get { return _number1; }
+            set { _number1 = value;
+                this.label1.Text = value;
+            }
+        }
+
+        private string _number2;
+
+        public string number2
+        {
+            get { return _number2; }
+            set { _number2 = value;
+                this.label1.Text = number1 + Operator + value;
+            }
+        }
+
+        private string _operator;
+
+        public string Operator
+        {
+            get { return _operator; }
+            set { _operator = value;
+                this.label1.Text = number1 + value;
+            }
+        }
+
+
+
         public MainForm()
         {
             InitializeComponent();
@@ -68,15 +106,7 @@ namespace test
        
         }
 
-        //private void MainForm_Load(object sender, EventArgs e)
-        //{
 
-        //}
-
-        //private void panel2_Paint(object sender, PaintEventArgs e)
-        //{
-
-        //}
 
 
         //觸發這個(事件)方法的對象
@@ -89,12 +119,21 @@ namespace test
             string number = bt.Text;
             this.label1.Text = bt.Text;
 
+
+            //当运算符为空的时候，一直往一个算数中添加数字
+            if (string.IsNullOrEmpty(Operator))
+                this.number1 = bt.Text;
+            else 
+                this.number2 = bt.Text;
+
+
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             Button bt = sender as Button;
             string op = bt.Text;
+            this.Operator = op;
 
         }
     }
