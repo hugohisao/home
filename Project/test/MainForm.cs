@@ -1,6 +1,7 @@
 ﻿//----------------------------------------------------------------------
 //2023.05.08 hugohisao P8計算羅輯編寫;
 //2023.05.09 hugohisao P9計算羅輯編寫;
+//2023.05.10 hugohisao P10 小數點及混合運算;
 
 //-------------------------------------------------------------------
 using System;
@@ -117,14 +118,14 @@ namespace test
             //拿到對象後獲取對象的Text屬性值
             Button bt = sender as Button;
             string number = bt.Text;
-            this.label1.Text = bt.Text;
+           // this.label1.Text = bt.Text;
 
 
             //当运算符为空的时候，一直往一个算数中添加数字
             if (string.IsNullOrEmpty(Operator))
-                this.number1 = bt.Text;
+                this.number1 += bt.Text;
             else 
-                this.number2 = bt.Text;
+                this.number2 += bt.Text;
 
 
         }
@@ -134,6 +135,35 @@ namespace test
             Button bt = sender as Button;
             string op = bt.Text;
             this.Operator = op;
+
+            if (!string.IsNullOrEmpty(number2)) {
+                //执行计算
+                //计算结果给Num1
+                button15_Click(null, null);
+                }
+            
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            double n1 = double.Parse(this.number1);
+            double n2 = double.Parse(this.number2);
+
+            switch (Operator) {
+                case "+":
+                    this.label1.Text = (n1 + n2).ToString();
+                    break;
+                case "-":
+                    this.label1.Text = (n1 - n2).ToString();
+                    break;
+                case "×":
+                    this.label1.Text = (n1 * n2).ToString();
+                    break;
+                case "÷":
+                    this.label1.Text = (n1 / n2).ToString();
+                    break;
+            }
+
 
         }
     }
