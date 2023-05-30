@@ -53,6 +53,11 @@ namespace test
             }
         }
 
+        List<string> operatList = new List<string>() { "" };
+
+
+
+
 
 
         public MainForm()
@@ -62,8 +67,7 @@ namespace test
             this.Load += MainForm_Load1;
 
             this.SizeChanged += MainForm_SizeChanged;
-           
-
+          
         }
 
         //窗體的默認寬和高
@@ -89,6 +93,8 @@ namespace test
                 item.Top = newY;
                 item.Width = newW;
                 item.Height = newH;
+               // item.Height = newH;
+
              
             }
 
@@ -117,36 +123,69 @@ namespace test
             //獲取到觸發這個事件的對象
             //拿到對象後獲取對象的Text屬性值
             Button bt = sender as Button;
-            string number = bt.Text;
-           // this.label1.Text = bt.Text;
+            /*string number = bt.Text;
+            // this.label1.Text = bt.Text;
 
 
             //当运算符为空的时候，一直往一个算数中添加数字
-            if (string.IsNullOrEmpty(Operator))
-                this.number1 += bt.Text;
-            else 
-                this.number2 += bt.Text;
+            if (string.IsNullOrEmpty(Operator)) 
+            {
+                if (bt.Text == ".")
+                {
+                    if (string.IsNullOrEmpty(number1)) this.number1 = "0";
+                 //   if (this.number1.IndexOf('.') <= 0)
+                   // {
+                        this.number1 += bt.Text;
+                   // }
+                }
+                else
+                    this.number1 += bt.Text;
+            }
+            else
+            {
+                if (bt.Text == ".") {
+                    if (string.IsNullOrEmpty(number2)) this.number2 = "0";
+                 //   if (this.number2.IndexOf('.') <= 0) {
+                        this.number2 += bt.Text;
+                 //   }
+                }
+                else
+                    this.number2 += bt.Text;
+            }*/
 
+            if (bt.Text == ".")
+            {
+                if (string.IsNullOrEmpty(operatList[operatList.Count - 1]))
+                    operatList[operatList.Count - 1] = "0";
 
+                operatList[operatList.Count - 1] += bt.Text;
+            }
+            else
+                operatList[operatList.Count - 1] += bt.Text;
+
+            this.label1.Text = string.Join("", operatList);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             Button bt = sender as Button;
-            string op = bt.Text;
-            this.Operator = op;
+            //string op = bt.Text;
+            //this.Operator = op;
 
-            if (!string.IsNullOrEmpty(number2)) {
-                //执行计算
-                //计算结果给Num1
-                button15_Click(null, null);
-                }
-            
+            //if (!string.IsNullOrEmpty(number2)) {
+            //    //执行计算
+            //    //计算结果给Num1
+            //    button15_Click(null, null);
+            //    }
+            operatList[operatList.Count - 1] += bt.Tag;
+            operatList.Add("");
+            this.label1.Text = string.Join("", operatList);
+
         }
 
         private void button15_Click(object sender, EventArgs e)
         {
-            double n1 = double.Parse(this.number1);
+            /*double n1 = double.Parse(this.number1);
             double n2 = double.Parse(this.number2);
 
             switch (Operator) {
@@ -162,8 +201,15 @@ namespace test
                 case "÷":
                     this.label1.Text = (n1 / n2).ToString();
                     break;
-            }
+            }*/
 
+            if (string.IsNullOrEmpty(operatList[operatList.Count - 1])) {
+                operatList.RemoveAt(operatList.Count - 1);
+                operatList[operatList.Count - 1].Remove(operatList[operatList.Count - 1].Length - 1);
+
+            }
+            string exp = string.Join("", operatList);
+            this.label1.Text = new DataTable().Compute(exp, "").ToString();           
 
         }
     }

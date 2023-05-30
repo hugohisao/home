@@ -1,0 +1,9 @@
+C:\programupdates\Project\test\bin\Release\test.exe.config
+C:\programupdates\Project\test\bin\Release\test.exe
+C:\programupdates\Project\test\bin\Release\test.pdb
+C:\programupdates\Project\test\obj\Release\test.MainForm.resources
+C:\programupdates\Project\test\obj\Release\test.Properties.Resources.resources
+C:\programupdates\Project\test\obj\Release\test.csproj.GenerateResource.cache
+C:\programupdates\Project\test\obj\Release\test.csproj.CoreCompileInputs.cache
+C:\programupdates\Project\test\obj\Release\test.exe
+C:\programupdates\Project\test\obj\Release\test.pdb
