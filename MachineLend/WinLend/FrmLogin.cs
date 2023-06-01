@@ -3,6 +3,7 @@
 //2023.06.01 hugohisao P15 代碼優化  
 
 
+
 //-------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
@@ -68,10 +69,6 @@ namespace WinLend
                                 };
 
 
-
-
-
-
                 ////建立與數據庫的鏈接
                 ////鏈接字符串---鑰匙
                 ////string connString = "server=.;database=WALSINMES;Integrated 
@@ -126,9 +123,10 @@ namespace WinLend
                 //                               //關閉鏈接
                 //conn.Close();
 
-                sqlHelper helper = new sqlHelper();
-                object o = helper.ExecuteScalar(sql, paras);
-
+                //調用
+                //sqlHelper helper = new sqlHelper();
+                object o = sqlHelper.ExecuteScalar(sql, paras);
+                
                 //處理結果
                 if ((int)o == 0)
                 {
@@ -141,13 +139,11 @@ namespace WinLend
                 else
                 {
                     MessageBox.Show("登錄成功！", "登錄提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //轉到主頁面
-                   
+                    //轉到主頁面                  
 
                 }
 
             }
-
 
             //返回的結果進行不同的提示
 
@@ -158,10 +154,6 @@ namespace WinLend
               this.Close();//一個窗體並且這個窗體是主頁面窗體退出程序
             // Application.Exit();//不是主頁面退出程序
             //Application.ExitThread();//當出現對話框進行判斷YES/NO或循環對話框，退出程序
-
-
-
-        
             
         }
     }
