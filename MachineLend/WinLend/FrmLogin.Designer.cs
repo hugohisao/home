@@ -54,6 +54,7 @@
             this.btnExit.TabIndex = 1;
             this.btnExit.Text = "退出";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // label1
             // 
@@ -84,6 +85,7 @@
             // 
             this.txtUserPwd.Location = new System.Drawing.Point(131, 90);
             this.txtUserPwd.Name = "txtUserPwd";
+            this.txtUserPwd.PasswordChar = '*';
             this.txtUserPwd.Size = new System.Drawing.Size(199, 25);
             this.txtUserPwd.TabIndex = 5;
             // 
