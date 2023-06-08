@@ -1,6 +1,7 @@
 ﻿//----------------------------------------------------------------------
 //2023.05.30 hugohisao P4登錄功能實現;
-//2023.06.01 hugohisao P15 代碼優化  
+//2023.06.01 hugohisao P15 代碼優化 
+//2023.06.08 hugohisao P17  
 
 
 
@@ -63,7 +64,7 @@ namespace WinLend
                 "and ui.UserPwd = @UserPwd ";
 
                 SqlParameter[] paras =
-{
+                    {
                                     new SqlParameter("@UserName", uName),
                                     new SqlParameter("@UserPwd", uPwd)
                                 };
@@ -139,7 +140,13 @@ namespace WinLend
                 else
                 {
                     MessageBox.Show("登錄成功！", "登錄提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //轉到主頁面                  
+                    //轉到主頁面 
+                    FrmMain fMain = new FrmMain();
+                    fMain.Show();
+                    //MessageBox.Show("1");
+                    this.Hide();
+                    
+                    
 
                 }
 
