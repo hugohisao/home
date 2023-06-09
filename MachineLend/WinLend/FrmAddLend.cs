@@ -16,5 +16,10 @@ namespace WinLend
         {
             InitializeComponent();
         }
+
+        private void FrmAddLend_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

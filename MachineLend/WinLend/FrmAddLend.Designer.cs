@@ -36,7 +36,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "FrmAddLend";
-            this.Text = "借出信息頁面";
+            this.Text = "借出信息";
+            this.Load += new System.EventHandler(this.FrmAddLend_Load);
             this.ResumeLayout(false);
 
         }

@@ -31,11 +31,11 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuMachine = new System.Windows.Forms.ToolStripMenuItem();
             this.menuLend = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuQuery = new System.Windows.Forms.ToolStripMenuItem();
             this.menuPurchase = new System.Windows.Forms.ToolStripMenuItem();
             this.menuPart = new System.Windows.Forms.ToolStripMenuItem();
             this.menuAssets = new System.Windows.Forms.ToolStripMenuItem();
             this.menuExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuQuery = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,40 +69,40 @@
             this.menuLend.Text = "新增借出信息";
             this.menuLend.Click += new System.EventHandler(this.menuLend_Click);
             // 
-            // menuPurchase
-            // 
-            this.menuPurchase.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuPart,
-            this.menuAssets});
-            this.menuPurchase.Name = "menuPurchase";
-            this.menuPurchase.Size = new System.Drawing.Size(81, 23);
-            this.menuPurchase.Text = "器材購買";
-            // 
-            // menuPart
-            // 
-            this.menuPart.Name = "menuPart";
-            this.menuPart.Size = new System.Drawing.Size(216, 26);
-            this.menuPart.Text = "零件/耗材請購";
-            // 
-            // menuAssets
-            // 
-            this.menuAssets.Name = "menuAssets";
-            this.menuAssets.Size = new System.Drawing.Size(216, 26);
-            this.menuAssets.Text = "資產請購";
-            // 
-            // menuExit
-            // 
-            this.menuExit.Name = "menuExit";
-            this.menuExit.Size = new System.Drawing.Size(81, 23);
-            this.menuExit.Text = "退出系統";
-            this.menuExit.Click += new System.EventHandler(this.menuExit_Click);
-            // 
             // menuQuery
             // 
             this.menuQuery.Name = "menuQuery";
             this.menuQuery.Size = new System.Drawing.Size(216, 26);
             this.menuQuery.Text = "查詢借出列表";
             this.menuQuery.Click += new System.EventHandler(this.menuQuery_Click);
+            // 
+            // menuPurchase
+            // 
+            this.menuPurchase.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuPart,
+            this.menuAssets});
+            this.menuPurchase.Name = "menuPurchase";
+            this.menuPurchase.Size = new System.Drawing.Size(81, 24);
+            this.menuPurchase.Text = "器材購買";
+            // 
+            // menuPart
+            // 
+            this.menuPart.Name = "menuPart";
+            this.menuPart.Size = new System.Drawing.Size(180, 26);
+            this.menuPart.Text = "零件/耗材請購";
+            // 
+            // menuAssets
+            // 
+            this.menuAssets.Name = "menuAssets";
+            this.menuAssets.Size = new System.Drawing.Size(180, 26);
+            this.menuAssets.Text = "資產請購";
+            // 
+            // menuExit
+            // 
+            this.menuExit.Name = "menuExit";
+            this.menuExit.Size = new System.Drawing.Size(81, 24);
+            this.menuExit.Text = "退出系統";
+            this.menuExit.Click += new System.EventHandler(this.menuExit_Click);
             // 
             // FrmMain
             // 

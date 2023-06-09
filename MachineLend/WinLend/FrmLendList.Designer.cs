@@ -37,6 +37,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "FrmLendList";
             this.Text = "借出列表";
+            this.Load += new System.EventHandler(this.FrmLendList_Load);
             this.ResumeLayout(false);
 
         }
