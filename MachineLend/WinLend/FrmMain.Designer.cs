@@ -36,6 +36,7 @@
             this.menuZcqg = new System.Windows.Forms.ToolStripMenuItem();
             this.menuQglb = new System.Windows.Forms.ToolStripMenuItem();
             this.menuExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuSystem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,10 +46,11 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuMachine,
             this.menuPurchase,
+            this.menuSystem,
             this.menuExit});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -65,14 +67,14 @@
             // menuLend
             // 
             this.menuLend.Name = "menuLend";
-            this.menuLend.Size = new System.Drawing.Size(216, 26);
+            this.menuLend.Size = new System.Drawing.Size(174, 26);
             this.menuLend.Text = "新增借出信息";
             this.menuLend.Click += new System.EventHandler(this.menuLend_Click);
             // 
             // menuJclb
             // 
             this.menuJclb.Name = "menuJclb";
-            this.menuJclb.Size = new System.Drawing.Size(216, 26);
+            this.menuJclb.Size = new System.Drawing.Size(174, 26);
             this.menuJclb.Text = "查詢借出列表";
             this.menuJclb.Click += new System.EventHandler(this.menuQuery_Click);
             // 
@@ -84,6 +86,7 @@
             this.menuPurchase.Name = "menuPurchase";
             this.menuPurchase.Size = new System.Drawing.Size(81, 24);
             this.menuPurchase.Text = "器材購買";
+            this.menuPurchase.Click += new System.EventHandler(this.menuPurchase_Click);
             // 
             // menuZcqg
             // 
@@ -105,6 +108,13 @@
             this.menuExit.Size = new System.Drawing.Size(81, 24);
             this.menuExit.Text = "退出系統";
             this.menuExit.Click += new System.EventHandler(this.menuExit_Click);
+            // 
+            // menuSystem
+            // 
+            this.menuSystem.Name = "menuSystem";
+            this.menuSystem.Size = new System.Drawing.Size(81, 24);
+            this.menuSystem.Text = "系統維護";
+            this.menuSystem.Click += new System.EventHandler(this.menuSystem_Click);
             // 
             // FrmMain
             // 
@@ -134,5 +144,6 @@
         private System.Windows.Forms.ToolStripMenuItem menuQglb;
         private System.Windows.Forms.ToolStripMenuItem menuExit;
         private System.Windows.Forms.ToolStripMenuItem menuJclb;
+        private System.Windows.Forms.ToolStripMenuItem menuSystem;
     }
 }

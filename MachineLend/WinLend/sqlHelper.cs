@@ -24,7 +24,6 @@ namespace WinLend
                 // cmd.CommandType = CommandType.StoredProcedure;//存儲過程
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddRange(paras);
-
                
                 //打開鏈接
                 conn.Open(); //最晚打開 最早關閉

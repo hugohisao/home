@@ -127,5 +127,23 @@ namespace WinLend
 
             }
         }
+
+        private void menuSystem_Click(object sender, EventArgs e)
+        {
+            bool bl = CheckForm("FrmSystem");// 設置查詢頁面只允許開啟1個,第二種方法；
+
+            if (bl != true)
+            {
+                FrmSystem frmSystem = new FrmSystem();
+                frmSystem.MdiParent = this;
+                frmSystem.Show();
+
+            }
+        }
+
+        private void menuPurchase_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
