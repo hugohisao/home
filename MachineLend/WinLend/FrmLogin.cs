@@ -2,7 +2,7 @@
 //2023.05.30 hugohisao P4登錄功能實現;
 //2023.06.01 hugohisao P15 代碼優化 
 //2023.06.08 hugohisao P17 
-//2023.06.09 hugohisao 
+//2023.06.13 hugohisao P19 
 
 
 
@@ -34,7 +34,7 @@ namespace WinLend
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
-        {
+        {      
             //獲取用戶輸入信息
             string uName = txtUserName.Text.Trim();
             string uPwd = txtUserPwd.Text.Trim();

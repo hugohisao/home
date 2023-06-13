@@ -21,17 +21,19 @@ namespace WinLend
         private void menuLend_Click(object sender, EventArgs e)
         {
             FrmAddLend frmAddLend = new FrmAddLend();
-            frmAddLend.MdiParent = this;
-            frmAddLend.Show();//頂級窗體 不能顯示到MDI容器中
+            frmAddLend.MdiParent = this;//頂級窗體 顯示到MDI容器中，新增多個窗體;
+            frmAddLend.Show();
 
         }
 
+        //退出系統
         private void menuExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Application.Exit();//執行程序關閉，自動觸發FormClosing事件;
+            //this.Close();
         }
 
-        //借出列表 不可以同時打開多個頁面
+        //查詢借出列表， 列表不可以同時打開多個頁面
         private void menuQuery_Click(object sender, EventArgs e)
         {
             //bool bl = false;
@@ -51,7 +53,7 @@ namespace WinLend
                 FrmLendList frmAddList = new FrmLendList();
                 //FrmLendList frmAddList = FrmLendList.CreateInstance();
                 frmAddList.MdiParent = this;
-                frmAddList.Show();
+                frmAddList.Show();               
 
             }
 
@@ -71,7 +73,7 @@ namespace WinLend
                 if (f.Name == formName)
                 {
                     bl = true;
-                    f.Activate();//獲取窗口頁面的焦點；
+                    f.Activate();//獲取當前窗口頁面的焦點；
                     break;
                 }
             }
@@ -85,6 +87,45 @@ namespace WinLend
         private void menuMachine_Click(object sender, EventArgs e)
         {
 
+        }
+
+        //新增資產、耗材請購
+        private void menuZcqg_Click(object sender, EventArgs e)
+        {
+            FrmAddQg frmAddQg = new FrmAddQg();
+            frmAddQg.MdiParent = this;//頂級窗體，顯示到MDI容器中，新增多個窗體;
+            frmAddQg.Show();
+
+        }
+
+        //查詢請購列表
+        private void menuQglb_Click(object sender, EventArgs e)
+        {
+            bool bl = CheckForm("FrmQgList");// 設置查詢頁面只允許開啟1個,第二種方法；
+
+            if (bl != true)
+            {
+                FrmQgList frmQgList = new FrmQgList();
+                frmQgList.MdiParent = this;
+                frmQgList.Show();
+
+            }
+
+        }
+
+        private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("您確定要退出系統嗎？", "退出系統提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);//退出系統提示框
+            if (result == DialogResult.Yes)
+            {
+                //Application.Exit();//退出應用系統
+                Application.ExitThread(); //退出當前線程上的消息循環
+            }
+            else
+            {
+                e.Cancel = true;
+
+            }
         }
     }
 }

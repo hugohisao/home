@@ -29,7 +29,6 @@ namespace WinLend
             return frmLendList;
         }
 
-
         private void FrmLendList_Load(object sender, EventArgs e)
         {
 

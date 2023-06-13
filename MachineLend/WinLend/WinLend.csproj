@@ -54,6 +54,12 @@
     <Compile Include="FrmAddLend.Designer.cs">
       <DependentUpon>FrmAddLend.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAddQg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddQg.Designer.cs">
+      <DependentUpon>FrmAddQg.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLendList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,11 +78,20 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmQgList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQgList.Designer.cs">
+      <DependentUpon>FrmQgList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sqlHelper.cs" />
     <EmbeddedResource Include="FrmAddLend.resx">
       <DependentUpon>FrmAddLend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddQg.resx">
+      <DependentUpon>FrmAddQg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLendList.resx">
       <DependentUpon>FrmLendList.cs</DependentUpon>
@@ -86,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQgList.resx">
+      <DependentUpon>FrmQgList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

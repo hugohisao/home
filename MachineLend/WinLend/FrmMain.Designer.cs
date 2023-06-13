@@ -31,10 +31,10 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuMachine = new System.Windows.Forms.ToolStripMenuItem();
             this.menuLend = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuQuery = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuJclb = new System.Windows.Forms.ToolStripMenuItem();
             this.menuPurchase = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuPart = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuAssets = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuZcqg = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuQglb = new System.Windows.Forms.ToolStripMenuItem();
             this.menuExit = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -48,7 +48,7 @@
             this.menuExit});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 27);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -56,7 +56,7 @@
             // 
             this.menuMachine.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuLend,
-            this.menuQuery});
+            this.menuJclb});
             this.menuMachine.Name = "menuMachine";
             this.menuMachine.Size = new System.Drawing.Size(81, 24);
             this.menuMachine.Text = "設備異動";
@@ -69,33 +69,35 @@
             this.menuLend.Text = "新增借出信息";
             this.menuLend.Click += new System.EventHandler(this.menuLend_Click);
             // 
-            // menuQuery
+            // menuJclb
             // 
-            this.menuQuery.Name = "menuQuery";
-            this.menuQuery.Size = new System.Drawing.Size(216, 26);
-            this.menuQuery.Text = "查詢借出列表";
-            this.menuQuery.Click += new System.EventHandler(this.menuQuery_Click);
+            this.menuJclb.Name = "menuJclb";
+            this.menuJclb.Size = new System.Drawing.Size(216, 26);
+            this.menuJclb.Text = "查詢借出列表";
+            this.menuJclb.Click += new System.EventHandler(this.menuQuery_Click);
             // 
             // menuPurchase
             // 
             this.menuPurchase.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuPart,
-            this.menuAssets});
+            this.menuZcqg,
+            this.menuQglb});
             this.menuPurchase.Name = "menuPurchase";
             this.menuPurchase.Size = new System.Drawing.Size(81, 24);
             this.menuPurchase.Text = "器材購買";
             // 
-            // menuPart
+            // menuZcqg
             // 
-            this.menuPart.Name = "menuPart";
-            this.menuPart.Size = new System.Drawing.Size(180, 26);
-            this.menuPart.Text = "零件/耗材請購";
+            this.menuZcqg.Name = "menuZcqg";
+            this.menuZcqg.Size = new System.Drawing.Size(216, 26);
+            this.menuZcqg.Text = "新增資產/耗材請購";
+            this.menuZcqg.Click += new System.EventHandler(this.menuZcqg_Click);
             // 
-            // menuAssets
+            // menuQglb
             // 
-            this.menuAssets.Name = "menuAssets";
-            this.menuAssets.Size = new System.Drawing.Size(180, 26);
-            this.menuAssets.Text = "資產請購";
+            this.menuQglb.Name = "menuQglb";
+            this.menuQglb.Size = new System.Drawing.Size(216, 26);
+            this.menuQglb.Text = "查詢請購列表";
+            this.menuQglb.Click += new System.EventHandler(this.menuQglb_Click);
             // 
             // menuExit
             // 
@@ -114,6 +116,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmMain";
             this.Text = "資訊服務系統";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMain_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -127,9 +130,9 @@
         private System.Windows.Forms.ToolStripMenuItem menuMachine;
         private System.Windows.Forms.ToolStripMenuItem menuLend;
         private System.Windows.Forms.ToolStripMenuItem menuPurchase;
-        private System.Windows.Forms.ToolStripMenuItem menuPart;
-        private System.Windows.Forms.ToolStripMenuItem menuAssets;
+        private System.Windows.Forms.ToolStripMenuItem menuZcqg;
+        private System.Windows.Forms.ToolStripMenuItem menuQglb;
         private System.Windows.Forms.ToolStripMenuItem menuExit;
-        private System.Windows.Forms.ToolStripMenuItem menuQuery;
+        private System.Windows.Forms.ToolStripMenuItem menuJclb;
     }
 }
