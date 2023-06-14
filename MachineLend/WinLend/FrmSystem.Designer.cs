@@ -28,38 +28,72 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvPersonList = new System.Windows.Forms.DataGridView();
+            this.SeqNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserPwd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPersonList)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvPersonList
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(366, 336);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvPersonList.AllowUserToAddRows = false;
+            this.dgvPersonList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPersonList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPersonList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SeqNo,
+            this.UserName,
+            this.UserPwd});
+            this.dgvPersonList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvPersonList.Location = new System.Drawing.Point(0, 0);
+            this.dgvPersonList.Name = "dgvPersonList";
+            this.dgvPersonList.RowTemplate.Height = 27;
+            this.dgvPersonList.Size = new System.Drawing.Size(551, 458);
+            this.dgvPersonList.TabIndex = 0;
+            this.dgvPersonList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPersonList_CellContentClick);
+            // 
+            // SeqNo
+            // 
+            this.SeqNo.DataPropertyName = "SeqNo";
+            this.SeqNo.HeaderText = "序號";
+            this.SeqNo.Name = "SeqNo";
+            this.SeqNo.ReadOnly = true;
+            // 
+            // UserName
+            // 
+            this.UserName.DataPropertyName = "UserName";
+            this.UserName.HeaderText = "用戶名";
+            this.UserName.Name = "UserName";
+            this.UserName.ReadOnly = true;
+            // 
+            // UserPwd
+            // 
+            this.UserPwd.DataPropertyName = "UserPwd";
+            this.UserPwd.HeaderText = "密碼";
+            this.UserPwd.Name = "UserPwd";
+            this.UserPwd.ReadOnly = true;
             // 
             // FrmSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(366, 336);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(551, 458);
+            this.Controls.Add(this.dgvPersonList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "FrmSystem";
             this.Text = "系統維護";
             this.Load += new System.EventHandler(this.FrmSystem_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPersonList)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvPersonList;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SeqNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserPwd;
     }
 }

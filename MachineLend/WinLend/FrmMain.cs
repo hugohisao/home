@@ -82,8 +82,6 @@ namespace WinLend
 
         }
 
-
-
         private void menuMachine_Click(object sender, EventArgs e)
         {
 

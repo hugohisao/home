@@ -3,6 +3,7 @@
 //2023.06.01 hugohisao P15 代碼優化 
 //2023.06.08 hugohisao P17 
 //2023.06.13 hugohisao P19 
+//2023.06.14 hugohisao P20 
 
 
 
@@ -56,19 +57,43 @@ namespace WinLend
 
             //與數據庫通信 檢查輸入與數據庫是否一致
             {
-                string sql = "SELECT " +
-                "COUNT(1) " +
-                "FROM " +
-                "WALSINMES.dbo.UserInfo ui " +
-                "WHERE " +
-                "ui.UserName = @UserName " +
-                "and ui.UserPwd = @UserPwd ";
+                //方法一: sqlHelper 用數組進行傳參
+                //string sql = "SELECT " +
+                //"COUNT(1) " +
+                //"FROM " +
+                //"WALSINMES.dbo.UserInfo ui " +
+                //"WHERE " +
+                //"ui.UserName = @UserName " +
+                //"and ui.UserPwd = @UserPwd ";
+
+                string  sql = "SELECT\n" +
+                            "COUNT(1)\n" +
+                            "FROM\n" +
+                            "WALSINMES.dbo.UserInfo ui\n" +
+                            "WHERE\n" +
+                            "ui.UserName = @UserName\n" +
+                            "and ui.UserPwd = @UserPwd\n";
+
 
                 SqlParameter[] paras =
                     {
                                     new SqlParameter("@UserName", uName),
                                     new SqlParameter("@UserPwd", uPwd)
                                 };
+
+                //方法二: sqlHelper 不用數組進行傳參
+                //string sql = "SELECT " +
+                //"COUNT(1) " +
+                //"FROM " +
+                //"WALSINMES.dbo.UserInfo ui " +
+                //"WHERE " +
+                //"ui.UserPwd = @UserPwd ";
+
+                //SqlParameter paras = new SqlParameter("@UserPwd", uPwd);
+
+
+
+
 
 
                 ////建立與數據庫的鏈接
@@ -96,9 +121,11 @@ namespace WinLend
                 //                "WHERE " +
                 //                "ui.UserName = @UserName " +
                 //                "and ui.UserPwd = @UserPwd ";
+
                 ////添加參數
                 ////SqlParameter ParaUname = new SqlParameter("@UserName", uName);
                 ////SqlParameter ParaUPwd = new SqlParameter("@UserPwd", uPwd);
+
                 //SqlParameter[] paras =
                 //{
                 //     new SqlParameter("@UserName", uName),
