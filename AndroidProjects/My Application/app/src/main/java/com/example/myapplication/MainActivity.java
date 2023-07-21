@@ -4,18 +4,29 @@ import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    TextView tvContent;
+    private TextView tvContent;
+    private Button btnChangeJava;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view2_layout);
+
         tvContent = findViewById(R.id.tv_content);
+        btnChangeJava = findViewById(R.id.btn_change_java);
+        btnChangeJava.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tvContent.setText("紅包拿來");
+
+            }
+        });
 
     }
 
