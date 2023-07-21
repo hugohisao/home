@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_walsin"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@color/green"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:text="WALSIN Special Steel"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/et_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:drawableRight="@drawable/delete_01" />
+        <!--    android:hint="輸入賬號:"-->
+        <!--    android:typeface="monospace"-->
+        <!--    android:maxLines="1"-->
+        <!--    android:text="常熟\n華新\n特殊鋼"-->
+        <!--    android:textColor="@color/white"-->
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/green"
+            android:text="登錄"
+            android:textSize="25sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/green"
+            android:text="取消"
+            android:textSize="25sp" />
+
+        <!--        <Button-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="10dp"-->
+        <!--            android:background="@color/green"-->
+        <!--            android:text="登錄"-->
+        <!--            android:textSize="25sp" />-->
+
+        <!--        android:textAllCaps="true"-->
+
+        <ImageView
+            android:id="@+id/iv_pic"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_margin="20dp"
+            android:background="@color/green"
+            android:scaleType="centerCrop"
+            android:src="@drawable/walsin"
+
+            />
+
+        <!--        <ImageView-->
+        <!--            android:id="@+id/iv_pic02"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="300dp"-->
+        <!--            android:layout_margin="20dp"-->
+        <!--            android:background="@color/green"-->
+        <!--            android:scaleType="centerCrop"-->
+        <!--            android:src="@drawable/walsin" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:buttonTint="@color/red"-->
+        <!--            android:checked="true"-->
+        <!--            android:text="記住密碼" />-->
+
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/blue"
+            android:checked="true"
+            android:text="記住密碼"
+            android:theme="@style/Theme.AppCompat.Light" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <RadioButton
+                android:id="@+id/rb_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/blue"
+                android:checked="true"
+                android:text="單選"
+                android:theme="@style/Theme.AppCompat.Light" />
+
+            <RadioButton
+                android:id="@+id/rb_bt02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/blue"
+                android:text="多選"
+                android:theme="@style/Theme.AppCompat.Light" />
+
+
+        </RadioGroup>
+
+    </LinearLayout>
+</ScrollView>
