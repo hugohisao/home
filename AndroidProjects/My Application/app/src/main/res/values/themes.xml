@@ -1,15 +1,24 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
+
+<!-- 主題第一種 格式內容    -->
     <style name="Base.Theme.MyApplication" parent="Theme.Material3.DayNight.NoActionBar">
         <!--Customize your light theme here. -->
         <!--<item name="colorPrimary">@color/my_light_primary</item> -->
-    </style>
 
 <!--    <style name="Base.Theme.MyApplication" parent="Theme.AppCompat.Light">-->
 <!--        &lt;!&ndash; Customize your light theme here. &ndash;&gt;-->
 <!--        &lt;!&ndash; <item name="colorPrimary">@color/my_light_primary</item> &ndash;&gt;-->
-<!--    </style>-->
+    </style>
 
 
     <style name="Theme.MyApplication" parent="Base.Theme.MyApplication" />
+
+
+
+<!--    主題第二種 格式內容  -->
+    <style name="MyTheme" parent="Theme.AppCompat.Light" />
+
+
+
 </resources>

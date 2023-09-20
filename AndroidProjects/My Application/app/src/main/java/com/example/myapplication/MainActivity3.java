@@ -22,7 +22,7 @@ public class MainActivity3 extends AppCompatActivity {
         setContentView(R.layout.view_layout);
         //TextView textView = new TextView(this);
         tvWalsin = findViewById(R.id.tv_walsin);
-        tvWalsin.setTypeface(Typeface.createFromAsset(getAssets(), "simkai.ttf"));
+        tvWalsin.setTypeface(Typeface.createFromAsset(getAssets(), "simKai.ttf"));
         //tvWalsin.setText("華新");
 
         //跑馬燈效果，獲取焦點
@@ -37,6 +37,7 @@ public class MainActivity3 extends AppCompatActivity {
         etAccount.setText("瘦唧唧的豬八戒");
         String e = etAccount.getText().toString();
         etAccount.setSelection(e.length() - 3);
+
         //etAccount.requestFocus();
 
         //設置ImageView背景圖片
@@ -45,9 +46,12 @@ public class MainActivity3 extends AppCompatActivity {
 //        ivPic.setImageResource(R.drawable.ic_launcher_background);
 
 //        getDrawable(R.drawable.walsin);
-        Drawable drawable = ContextCompat.getDrawable(this, R.drawable.ic_launcher_background);
+//        Drawable drawable = ContextCompat.getDrawable(this, R.drawable.ic_launcher_background);
+        Drawable drawable = ContextCompat.getDrawable(this, R.drawable.walsin);
         ivPic.setImageDrawable(drawable);
-        ivPic.setVisibility(View.INVISIBLE);
+
+//        隱藏圖片
+//        ivPic.setVisibility(View.INVISIBLE);
 
     }
 

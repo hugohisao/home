@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="btPadding">10dp</dimen>
+    <dimen name="btTextSize">25sp</dimen>
+    <dimen name="btLayoutMargin">20dp</dimen>
+    <dimen name="Edit_PaddingLeft">10dp</dimen>
+
+</resources>

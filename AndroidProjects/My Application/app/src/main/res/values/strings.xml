@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">My Application</string>
+    
+    <string name="title">WalSin</string>
+    <string name="btn_click">點擊</string>
+    <string name="btn_hint">用戶名</string>
+
+
+    <!--    "walSin1",
+            "walSin2",
+            "walSin3",
+            "walSin4",
+            "walSin5"    -->
+
+    <string-array name="myStringArray">
+        <item>\"walSin1\"</item>
+        <item>"walSin2"</item>
+        <item>"walSin3"</item>
+        <item>"walSin4"</item>
+        <item>"walSin5"</item>
+
+    </string-array>
+
 </resources>
