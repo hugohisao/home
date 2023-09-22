@@ -13,5 +13,10 @@
         <item name="android:statusBarColor" tools:targetApi="1">?attr/colorPrimaryVariant</item>
         <!--Customize your theme here.-->
     </style>
+
     <style name="Theme.LoginTest14" parent="Base.Theme.LoginTest14" />
+
+
+    <!--    早期繼承 主題格式-->
+    <!--    <style name="MyTheme" parent="Theme.AppCompat.Light"/>-->
 </resources>
