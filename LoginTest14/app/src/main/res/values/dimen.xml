@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tlTextSize">30sp</dimen>
+    <dimen name="tlPadding">15dp</dimen>
+
+    
+</resources>
